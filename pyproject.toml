@@ -2,13 +2,20 @@
 name = "ws-notifier"
 version = "0.1.0"
 description = ""
-authors = ["carol <awdrg1210@gmail.com>"]
+authors = ["Carol <awdrg1210@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ws_notifier"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+fastapi = "^0.85.2"
+uvicorn = {extras = ["standard"], version = "^0.19.0"}
+aioredis = {extras = ["hiredis"], version = "^2.0.1"}
 
-[tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^5.0.4"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
