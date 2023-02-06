@@ -8,7 +8,11 @@ from .handler import room_manager
 from .middleware import RoomEventMiddleware
 from .setting import settings
 
-app = FastAPI()
+app = FastAPI(
+    docs_url="/api/docs",
+    redoc_url="/api/redoc",
+    openapi_url="/api/openapi.json"
+)
 
 
 @app.on_event("startup")

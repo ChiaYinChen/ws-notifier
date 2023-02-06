@@ -10,7 +10,7 @@ from .service import publish_channel_message
 router = APIRouter()
 
 
-@router.post("/send-message")
+@router.post("/api/send-message")
 async def send_message(
     event_id: str,
     client_id: str,
