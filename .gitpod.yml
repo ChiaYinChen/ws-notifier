@@ -1,0 +1,11 @@
+tasks:
+  - command: |
+      make up
+
+ports:
+  - port: 80
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
